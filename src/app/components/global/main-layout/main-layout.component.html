@@ -1,0 +1,18 @@
+<mat-grid-list cols="3" rowHeight="fit" style="height: 100%;">
+
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <!-- <div style="display: flex;"> -->
+      <div>left</div>
+      <app-menu></app-menu>
+      <div>right</div>
+    <!-- </div> -->
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <ng-content></ng-content>
+  </mat-grid-tile>
+  
+  <mat-grid-tile [colspan]="3" [rowspan]="1" >
+    <p>footer</p>
+  </mat-grid-tile>
+</mat-grid-list>

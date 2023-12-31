@@ -1,0 +1,25 @@
+<mat-list role="list">
+  @for (property of data; track property.id) {
+  <mat-list-item role="listitem" style="height: 60px;">
+    <div style="display: flex;">
+      <div style="flex: 1">
+        <img style="width: 50px" matListItemAvatar
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Square_200x200.png" alt="...">
+      </div>
+      <div style="flex: 10">
+        <h3>{{ property.title }}</h3>
+      </div>
+      <div style="flex: 1">
+        <button mat-icon-button [matMenuTriggerFor]="menu"
+          aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-list-item>
+  }
+</mat-list>
